@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="equipamentos.css">
+    <title>Techman - Equipamentos</title>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="/web/assets/techman.png" alt="Logo Techman" style="height: 40px; width: auto; display: block; margin: 0 auto;">
+        </div>
+        <div class="header-actions">
+            <div class="user-info" id="userInfo">Carregando...</div>
+            <button class="btn" id="newEquipmentBtn" onclick="openNewEquipmentModal()" style="display: none;">
+                Novo equipamento
+            </button>
+            <button class="btn btn-danger" onclick="logout()">Sair</button>
+        </div>
+    </div>
+
+    <!-- O resto do HTML permanece igual (container, modais, etc.) -->
+    <div class="container">
+        <div class="loading" id="loadingEquipments">
+            <div class="spinner"></div>
+            <div>Carregando equipamentos...</div>
+        </div>
+        
+        <div class="equipment-grid" id="equipmentGrid" style="display: none;"></div>
+        
+        <div class="no-equipment" id="noEquipment" style="display: none;">
+            <h3>Nenhum equipamento encontrado</h3>
+            <p>Não há equipamentos cadastrados no sistema.</p>
+        </div>
+    </div>
+
+    <!-- Modais (commentsModal, deleteModal, newEquipmentModal) permanecem iguais -->
+    <div id="commentsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Comentários</h2>
+                <span class="close" onclick="closeCommentsModal()">&times;</span>
+            </div>
+            <div id="commentsContent"></div>
+        </div>
+    </div>
+
+    <div id="deleteModal" class="modal">
+        <div class="modal-content" style="max-width: 400px;">
+            <div class="modal-header">
+                <h2 class="modal-title">Exclusão de equipamento</h2>
+                <span class="close" onclick="closeDeleteModal()">&times;</span>
+            </div>
+            <div style="margin-bottom: 20px;">
+                <p>Atenção! Tem certeza que deseja excluir o equipamento? Essa ação não poderá ser desfeita.</p>
+            </div>
+            <div style="display: flex; gap: 10px; justify-content: flex-end;">
+                <button class="btn" onclick="closeDeleteModal()">Cancelar</button>
+                <button class="btn btn-danger" onclick="confirmDelete()">Excluir</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="newEquipmentModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Cadastro de equipamento</h2>
+                <span class="close" onclick="closeNewEquipmentModal()">&times;</span>
+            </div>
+            <form id="newEquipmentForm">
+                <div style="margin-bottom: 15px;">
+                    <label>Nome</label>
+                    <input type="text" id="equipmentName" required style="width: 100%; padding: 10px; border-radius: 5px;">
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <label>Endereço da Imagem</label>
+                    <input type="text" id="equipmentImage" required style="width: 100%; padding: 10px; border-radius: 5px;">
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <label>Descrição</label>
+                    <textarea id="equipmentDescription" required style="width: 100%; padding: 10px; border-radius: 5px; min-height: 100px;"></textarea>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label>
+                        <input type="checkbox" id="equipmentActive" checked> Ativo
+                    </label>
+                </div>
+                <div style="display: flex; gap: 10px; justify-content: flex-end;">
+                    <button type="button" class="btn" onclick="closeNewEquipmentModal()">Cancelar</button>
+                    <button type="submit" class="btn" style="background: #44babc; color: white;">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="equipamentos.js"></script>
+</body>
+</html>

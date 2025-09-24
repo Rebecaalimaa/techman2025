@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Techman - Sistema de Gestão de Equipamentos</title>
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <img src="../web/assets/techman.png" alt="Logo Techman" style="height: 60px; width: auto; display: block; margin: 0 auto;">
+        </div>
+        
+        <div class="password-display" id="passwordDisplay">
+        </div>
+        
+        <div class="keypad">
+            <div class="key" onclick="addDigit('1')">1</div>
+            <div class="key" onclick="addDigit('2')">2</div>
+            <div class="key" onclick="addDigit('3')">3</div>
+            <div class="key" onclick="addDigit('4')">4</div>
+            <div class="key" onclick="addDigit('5')">5</div>
+            <div class="key" onclick="addDigit('6')">6</div>
+            <div class="key" onclick="addDigit('7')">7</div>
+            <div class="key" onclick="addDigit('8')">8</div>
+            <div class="key" onclick="addDigit('9')">9</div>
+        </div>
+        
+        <div class="action-buttons">
+            <div class="clear-btn" onclick="clearPassword()">C</div>
+            <div class="key" onclick="addDigit('0')">0</div>
+            <div class="enter-btn" id="enterBtn" onclick="login()" disabled>⏎</div>
+        </div>
+        
+        <div class="error-message" id="errorMessage"></div>
+        <div class="loading" id="loadingMessage">
+            <span class="spinner"></span>Verificando...
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
