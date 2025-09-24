@@ -9,6 +9,9 @@
 |**Desafio:**|
 |Para ajudar nesse problema, você deverá criar um sistema em sua plataforma de preferência que permita a gestão de equipamentos e de comentários sobre cada um dos equipamentos disponíveis na base de dados.<br>Nesse sistema, os usuários poderão inserir comentários de manutenção preventiva, manutenção corretiva, configurações e/ou qualquer outro compartilhamento de informação sobre o equipamento.<br>Além disso, você deverá manter um relatório/histórico de todos os equipamentos com seus respectivos comentários já inseridos no sistema.<br>O sistema desenvolvido deverá se chamar Techman e tem que conter uma área de login, recursos para cadastrar e excluir equipamentos (somente administrador) e recursos para exibição e inserção de comentários para cada equipamento.|
 
+# Diagrama de Atividades
+![UML DA](/web/assets/DA.png)
+
 ## Equipamentos Responsivo(ADM)
 ![](../web/assets/equipamentos-ADM-responsivo.png)
 ## Passo a Passo
