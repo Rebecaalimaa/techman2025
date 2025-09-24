@@ -1,5 +1,13 @@
 ## Fronte-End da Techman
 
+# Usuários para Login
+
+ senha   | perfil        |
+---------|---------------|
+ 212121  | Administrador |
+ 414141  | Gerente       |
+ 111111  | Comum         |
+ 313131  | Tecnico       |
 
 ## Requisitos
 
