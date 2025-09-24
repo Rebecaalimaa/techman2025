@@ -2,7 +2,7 @@
 
 ## Situação de Aprendizagem (Full Stack)- Manutenção de Equipamentos
 
-|![logotipo](../techman2025/web/assets/techman.png)|
+|![logotipo](../web/assets/techman.png)|
 |-|
 |**Contextualização:**|
 |Para facilitar o controle e gerenciamento do histórico de manutenções e demais registros de informações sobre determinado equipamento, as indústrias buscam constantemente soluções de software que tornem esse processo mais intuitivo, prático e dinâmico.|
